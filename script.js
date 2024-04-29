@@ -271,4 +271,61 @@ for (let [index, nom] of noms.entries()){
 }
 
 
+//Bloc 1.7: Promises & Async/Await
 
+//Exercici 1
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Hola, món');
+    }, 2000);
+});
+
+//Exercici 2
+promise.then(console.log);
+
+//Exercici 3
+let input = 'Holaa'; 
+
+let promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (input === 'Hola') {
+            resolve('Input is correct');
+        } else {
+            reject('Input is incorrect');
+        }
+    }, 2000);
+});
+
+promise2
+    .then(console.log) // resolve
+    .catch(console.error); // reject
+
+
+//Exercici 4 i 5
+async function printResult() {
+    try {
+        let result = await promise;
+        console.log(result);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+printResult();
+
+//Exercici 6
+let promesa1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise 1 resolved');
+    }, 2000);
+});
+
+let promesa2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise 2 resolved');
+    }, 3000);
+});
+
+Promise.all([promesa1, promesa2])
+    .then(values => console.log(values))
+    .catch(error => console.error(error));
