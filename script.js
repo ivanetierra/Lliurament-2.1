@@ -229,6 +229,46 @@ const majorDe10 = num => num > 10;
 console.log("Tots major de 10?: "+misNumeros.every(majorDe10));
 console.log("Algun major de 10?: "+misNumeros.some(majorDe10));
 
+//Bloc 1.6: Array loops
+
+let noms = ['Anna', 'Bernat', 'Clara'];
+let numbers = [1, 2, 3, 4, 5, 6];
+
+//Exercici 1
+noms.forEach(nom => console.log(nom));
+
+//Exercici 2
+for(let nom in noms) {
+    console.log(nom);
+}
+
+//Exercici 3
+const arrayParell = numbers.filter(num => num% 2 == 0);
+console.log(arrayParell);
+
+//Exercici 4
+let obj = { 
+    nom: 'Ona', 
+    edat: 25, 
+    ciutat: 'Barcelona' 
+};
+
+for (let key in obj) {
+    console.log(key + ': ' + obj[key]);
+}
+
+//Exercici 5
+for(let num in numbers) {
+    if (num === 5) {
+        break;
+    }
+    console.log(num);
+}
+
+//Exercici 6
+for (let [index, nom] of noms.entries()){
+    console.log(nom + " posicio: " + index);
+}
 
 
 
