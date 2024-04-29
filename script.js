@@ -219,7 +219,15 @@ console.log(sumaArrayNumeros2);
 //Exercici 5
 
 const numeros = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ];
-const 
+const miSuma =  numeros.filter(num => num>10).map(num=>num*2).reduce((total, num) => total +num, 0);
+console.log(miSuma);
+
+//Exercici 6
+
+const misNumeros = [11, 12, 13, 14];
+const majorDe10 = num => num > 10;
+console.log("Tots major de 10?: "+misNumeros.every(majorDe10));
+console.log("Algun major de 10?: "+misNumeros.some(majorDe10));
 
 
 
