@@ -185,7 +185,7 @@ const obj2 = {
     color: "blau"
 }
 
-obj3 = {...obj1, ...obj2}
+let obj3 = {...obj1, ...obj2}
 
 console.log(obj3);
 
@@ -314,13 +314,13 @@ async function printResult() {
 printResult();
 
 //Exercici 6
-let promesa1 = new Promise((resolve, reject) => {
+let promesa1 = new Promise((resolve) => {
     setTimeout(() => {
         resolve('Promise 1 resolved');
     }, 2000);
 });
 
-let promesa2 = new Promise((resolve, reject) => {
+let promesa2 = new Promise((resolve) => {
     setTimeout(() => {
         resolve('Promise 2 resolved');
     }, 3000);
