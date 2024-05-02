@@ -102,14 +102,16 @@ const processarElements = (miArray, callback) => {
 processarElements([1, 2, 3], (element) => console.log("numero: "+ element));
 
 console.log('Exercici 5');
-const processarCadena = (cadena, callback) => {
-    let cadenaMajusculas = cadena.toUpperCase();
-    return callback(cadenaMajusculas);
+function procesarCadena (cadena, miCallback) {
+    var cadenaMajusculas = cadena.toUpperCase();
+    miCallback(cadenaMajusculas);
 }
-console.log(processarCadena("Hola", (cadena) => "Tot en majuscules: "+cadena)); //duda
+
+procesarCadena('text en majuscules', nom => console.log(nom));
 
 
 console.log('Bloc 1.4 - REST & SPREAD OPERATORS');
+
 
 console.log('Exercici 1');
 let array1 = ["gos", "gat"];
